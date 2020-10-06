@@ -17,7 +17,7 @@ async def main():
 if __name__ == "__main__":
     start_time = time.perf_counter()
 
-    loop=asyncio.get_event_loop()
+    loop = asyncio.get_event_loop()
     loop.run_until_complete(main())
 
     end_time = time.perf_counter()

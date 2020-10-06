@@ -12,12 +12,9 @@ def main():
 
     with ProcessPoolExecutor(cpu_count() - 1) as executor:
         for num in range(1000, 16000):
-            futures.append(
-                executor.submit(get_prime_numbers, num)
-            )
+            futures.append(executor.submit(get_prime_numbers, num))
 
     wait(futures)
-
 
 
 if __name__ == "__main__":

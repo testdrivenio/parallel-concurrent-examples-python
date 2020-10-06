@@ -11,9 +11,7 @@ def main():
 
     with ThreadPoolExecutor() as executor:
         for num in range(1, 101):
-            futures.append(
-                executor.submit(make_request, num)
-            )
+            futures.append(executor.submit(make_request, num))
 
     wait(futures)
 
